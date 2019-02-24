@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            position: relative;
+        }
+        html, body {
+            color: black;
+            background-color: #d1d1d1;
+            margin: 0;
+            height: 100%;
+            padding: 0;
+            border: 0;
+            outline: 0;
+        }
+        div {
+            margin: 0px;
+        }
+        .outer {
+            background: linear-gradient(45deg, #f06, blue);
+            margin-top:0px;
+        }
+        .heading {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+        .space {
+            width: 20%;
+            height: 100px;
+            background-color: #E5B769;
+
+        }
+        .heading_text {
+            position: relative;
+            width: 60%;
+            text-align: center;
+        }
+        .h3toh6 {
+            position: relative;
+            text-align: center;
+            background-color: #FED4E7;
+
+        }
+        .paragraph {
+            text-align: center;
+            font-size: 20px;
+        }
+        .content {
+            display: flex;
+            flex-direction: row;
+            
+        }
+        .text {
+            width: 50%;
+            border-right: solid 3px black;
+            margin-right: 5px;
+            
+        }
+        .text input{
+            width: 200px;
+            height: 20px;
+            margin-left: 200px;
+        }
+        .part2 {
+            display: flex;
+            flex-direction: row;
+        }
+        .table {
+            margin-top: 0px;
+            width: 50%;
+            /* margin-left: auto;
+            margin-right: auto; */
+        }
+        .table h3 {
+            margin-top: 10px;
+            margin-bottom: 1px;
+            /* text-align: center; */
+        }
+        .list {
+            width: 50%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class = "outer">
+        <div class = "heading">
+            <div class = "space"></div>
+            <div class = "heading_text">
+                <h1>This is a Heading(h1)</h1>
+                <h2>This is a Heading too!(h2)</h2>
+            </div>
+            <div class = "space"></div>
+        </div>
+        
+        <div class = "h3toh6">
+            <h3>This is also a Heading!(h3)</h3>
+            <h4>This just goes on...</h4>
+            <h5>and on...</h5>
+            <h6>till h6!</h6>
+        </div>
+    </div>
+    
+    
+        
+    
+    <div class = "paragraph">
+        <p>This is a paragraph. Line breaks here:</p>
+        and continues...<br>
+        <hr>
+    </div>
+    <div class = "content">
+        <div class = "text">
+            There are a lot of styles you can add to text without using css! For
+            instance you can make words <b>bold</b>, <strong>important</strong>, <i>italicc</i>, <em>emphasized</em>, <small>small</small>...
+            <mark>the</mark> <del>list</del> <ins>goes</ins> <sub>on</sub> <sup>and</sup> on.<br>
+            You can also add quotes! For instance formal american president once said:
+            <blockquote>Change will not come if we wait for some other person or some other
+                time. We are the ones we've been waiting for. We are the change that
+                we seek.</blockquote>
+            not to mention how easy commenting is in html<br><br>
+
+            <input placeholder="here's an input field">
+        </div>
+        
+        <div class = "image">
+            <a href = "https://www.youtube.com/watch?v=hC8CH0Z3L54">This is a link tag which u can click to navigate to a good song.</a><br>
+            <a href = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2-J_AvGamdCtDUYYkOTVUEpFXaRHDo06QZZBo3YLTvlqp2q1o">
+            You can wrap anything you want in a link tag; here's an image for example.<br>
+            <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2-J_AvGamdCtDUYYkOTVUEpFXaRHDo06QZZBo3YLTvlqp2q1o" width="500px" height="500px"></a><br>
+        </div>
+    </div>
+
+    <div class="part2">
+        <div class="table">
+            <h3>This is a table</h3>
+            <table border="1">
+                <tr>
+                <td><b>Head1 </b></td>   <td><b>Head2 </b></td>   <td><b>Head3</b></td>
+                </tr>
+                
+                <tr>
+                <td>This </td>  <td>Is </td>    <td>How</td>
+                </tr>
+                
+                <tr>
+                <td>You </td>   <td>Create </td>  <td>Tables</td>
+                </tr>
+            </table>
+        </div>
+        <ul class="list">
+            <ul>
+                <li>This is a list!</li>
+                <li>this kind of list is called an unordered list.</li>
+            </ul>
+            
+            <ol>
+                <li>Ordered Lists!</li>
+                <li>As you can see it is marked with numbers.</li>
+            </ol>
+        </ul>
+    </div>
+    
+    
+    <h1>Blocks and Inline Elements</h1>
+    A div is a block-level element, which means that it will always start up a new line and take up the full width available.<br>
+    And a span tag is inline, meaning span that it only takes up as much width as necessary.<br>
+    
+    <h1>Now head over to the version with css and see how powerful css is!</h1>
+
+</body>
+</html>
