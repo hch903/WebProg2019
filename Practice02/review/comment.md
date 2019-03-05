@@ -18,3 +18,4 @@
 **JavaScript**
 * 在photo_cnt==photo_source.length-1的時候，應該不需要add disabled
 * 程式碼很簡潔，清楚明瞭
+* ==可以改為===，比較不會出錯
