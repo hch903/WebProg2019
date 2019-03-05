@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Viewer</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    </head>
+    <body>
+    <div class="image-viewer__container">
+        <span class="image-viewer__title">Image Viewer</span>
+        
+        <div class="image-viewer__main">
+            <button id="back_butt" class="image-viewer__button" onclick="back_photo()">
+                <img src="./back.png" alt="Back">
+            </button>
+                
+            <div class="image-viewer__display">
+                <img id="display" src="" alt="Image">
+                <div class="image-viewer__display-source-wrapper">
+                    <span>
+                        <a id="source" href=""></a>
+                    </span>
+                </div>
+            </div>
+            <button id="next_butt" class="image-viewer__button" onclick="next_photo()">
+                <img src="./next.png" alt="Next">
+            </button>
+        </div>
+    </div>
+    </body>
+</html>
+<script type="text/javascript" src="./main.js"></script>
