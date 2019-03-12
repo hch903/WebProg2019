@@ -1,7 +1,8 @@
 // get element
 const input = document.getElementById("todo-app__input");
 const count = document.getElementsByClassName("todo-app__total");
-const view_buttons = document.getElementsByTagName("li")
+const view_buttons = document.getElementsByTagName("ul");
+const clear_button = document.getElementById("Clear");
 var id = 0;
 var cnt = 0;
 var todo_list_array = [];
@@ -26,9 +27,10 @@ input.addEventListener("keypress", event => {
 });
 
 // buttons' function
-view_buttons[0].onclick = "select_all";
-view_buttons[1].onclick = "select_active";
-view_buttons[2].onclick = "select_completed";
+view_buttons[0].firstElementChild.onclick = select_all;
+view_buttons[0].firstElementChild.nextElementSibling.onclick = select_active;
+view_buttons[0].lastElementChild.onclick = select_completed;
+clear_button.onclick = clean_completed;
 
 function create_ul() {
     // 新增todo的ul節點
@@ -172,5 +174,82 @@ function change_status(id) {
 }
 
 function select_all() {
-    
+    // get ul, li element
+    const ul = document.getElementById("todo-list");
+    const li = ul.getElementsByTagName("li");
+
+    // 先將ul中的element移除
+    for(let i = 0; i < li.length; i++)
+        ul.removeChild(li[i]);
+
+    // 將todo_list_array中的node都append到ul中
+    for(let i = 0; i < todo_list_array.length; i++)
+        ul.appendChild(todo_list_array[i].node)
+}
+
+function select_active() {
+    // get ul, li element
+    const ul = document.getElementById("todo-list");
+    if(ul !== null){
+        const li = ul.getElementsByTagName("li");
+
+        // 先將ul中的element移除
+        let j = 0
+        while(li.length > 0)
+            ul.removeChild(li[j]);
+
+        // 再將active的項目加入ul
+        for(let i = 0; i < todo_list_array.length; i++)
+            if(todo_list_array[i].isComplete === false)
+                ul.appendChild(todo_list_array[i].node);
+    }
+}
+
+function select_completed() {
+    // get ul, li element
+    const ul = document.getElementById("todo-list");
+    if(ul !== null){
+        const li = ul.getElementsByTagName("li");
+
+        // 先將ul中的element移除
+        let j = 0
+        while(li.length > 0)
+            ul.removeChild(li[j]);
+
+        // 再將completed的項目加入ul
+        for(let i = 0; i < todo_list_array.length; i++)
+            if(todo_list_array[i].isComplete === true)
+                ul.appendChild(todo_list_array[i].node);
+    }
+}
+
+function clean_completed() {
+    const ul = document.getElementById("todo-list");
+    if(ul !== null){
+        const li = ul.getElementsByTagName("li");
+
+        // 先將ul中的element移除
+        let j = 0
+        while(li.length > 0)
+            ul.removeChild(li[j]);
+
+        // 再將active的項目加入ul
+        for(let i = 0; i < todo_list_array.length; i++)
+            if(todo_list_array[i].isComplete === false)
+                ul.appendChild(todo_list_array[i].node);
+        
+        // 並將completed的項目從todo_list_array中刪除
+        while(true){
+            let flag = false;
+            for(let i = 0; i < todo_list_array.length; i++){
+                if(todo_list_array[i].isComplete === true){
+                    flag = true;
+                    todo_list_array.splice(i, 1);
+                    break;
+                }
+            }
+            if(flag === false)
+                break;
+        }
+    }
 }
