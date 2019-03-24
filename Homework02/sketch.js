@@ -90,6 +90,7 @@ function setup() {
     );
     myCanvas.parent("canvasWrapper");
 
+    bird = [];
     // setup code below
     if(seed < 0.3){
         bird[0] = asset[0][0];
