@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css?family=Amita|Heebo|Mina");
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  font-family: "Heebo", sans-serif;
+}
+
+.header {
+  background-color: rgba(2, 106, 167, 0.8);
+  padding: 8px 8px;
+  text-align: center;
+}
+
+.header .logo {
+  font-family: "Amita", sans-serif;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  margin-top: 5px;
+}
+
+.content {
+  background-color: #026aa7;
+  height: 100%;
+}
+
+.content .board-header .board-name {
+  color: #f6f6f6;
+  font-size: 18px;
+  padding: 8px;
+  font-weight: 700;
+}
+
+.content .board-content {
+  height: 100%;
+}
+
+.content .board-content .list-group {
+  display: inline-block;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  vertical-align: top;
+}
+
+.content .board-content .list-wrap {
+  display: inline-block;
+  margin: 0px 5px;
+  width: 270px;
+  height: 100%;
+  vertical-align: top;
+}
+
+.content .board-content .list-wrap:first-child {
+  margin-left: 10px;
+}
+
+.content .board-content .list-wrap .list-content {
+  display: block;
+  background-color: #e2e4e6;
+  border-radius: 3px;
+}
+
+.content .board-content .list-wrap .list-content .list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #4d4d4d;
+  padding-right: 34px;
+  position: relative;
+  height: 35px;
+  padding: 4px 10px;
+}
+
+.content .board-content .list-wrap .list-content .list-header .text-area {
+  display: inline-flex;
+  color: #4d4d4d;
+  margin: 3px 0px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  height: 22px;
+  background-color: #e2e4e6;
+  border: 0px solid #000;
+  resize: none;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.content .board-content .list-wrap .list-content .list-header .text-area:focus {
+  background-color: #fff;
+  border: 1px solid #0079bf;
+  box-shadow: 0 0 2px 0 #0284c6;
+}
+
+.content .board-content .list-wrap .list-content .list-header .list-status {
+  display: inline-flex;
+  color: #4d4d4d;
+  opacity: 0.5;
+  margin: 7px 5px 3px 3px;
+  font-size: 16px;
+  line-height: 22px;
+  cursor: pointer;
+  position: relative;
+}
+
+.content .board-content .list-wrap .list-content .list-header .status-shown {
+  position: absolute;
+  border-radius: 3px;
+  display: block;
+  padding: 7px 10px;
+  top: -32px;
+  right: 0px;
+  background-color: #e2e4e6;
+  color: #4d4d4d;
+  opacity: 0.8;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.content .board-content .list-wrap .list-content .list-card {
+  display: block;
+  color: #444;
+  margin: 0px 4px;
+  padding: 0px 4px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.content .board-content .list-wrap .list-content .list-card .list-member {
+  border-radius: 3px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.content .board-content .list-wrap .list-content .list-card .list-member .list-detail {
+  line-height: 18px;
+  padding: 8px 6px 3px 8px;
+  display: inline-flex;
+  transition-duration: 0.2s
+}
+
+.content .board-content .list-wrap .list-content .list-card .list-member .list-detail.checked {
+  line-height: 18px;
+  padding: 8px 6px 3px 8px;
+  display: inline-flex;
+  text-decoration: line-through;
+  opacity: 0.5;
+  transition-duration: 0.2s
+}
+
+.content .board-content .list-wrap .list-content .list-card .list-member .list-edit {
+  line-height: 18px;
+  padding: 8px 6px 3px 8px;
+  display: inline-flex;
+  opacity: 0.1;
+  margin-right: 3px;
+  cursor: pointer;
+  transition-duration: 0.2s
+}
+
+.content .board-content .list-wrap .list-content .list-card .list-member .list-edit:hover {
+  opacity: 0.5;
+}
+
+.content .board-content .list-wrap .list-content .card-adder-wrap {
+  display: block;
+  color: #838c91;
+  width: 100%;
+  border-radius: 3px;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  /* display: none; */
+}
+
+.content .board-content .list-wrap .list-content .adding-card {
+  display: block;
+  color: #838c91;
+  width: 100%;
+  border-radius: 3px;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 400;
+  margin: -5px 0 0 0px;
+  display: none;
+}
+
+.content .board-content .list-wrap .list-content .adding-card .item-add-input {
+  border-radius: 3px;
+  width: 100%;
+  border: none;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 7px;
+  display: block;
+  cursor: text;
+  text-indent: 0px;
+  margin: 0px;
+  /* display: none; */
+  transition-duration: 0.3s;
+  border-bottom: 1px solid #ccc;
+}
+
+.content .board-content .list-wrap .list-content .adding-card .item-add-btn {
+  background-color: #5aac44;
+  color: #fff;
+  box-shadow: 0 1px 0 #519839;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  margin: 8px 4px 0 0;
+  padding: 5px 16px;
+  border-radius: 3px;
+  line-height: 22px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  /* display: none; */
+  transition-duration: 0.3s;
+}
+
+.content .board-content .list-wrap .list-content .adding-card .item-cancel-btn {
+  height: 30px;
+  color: #999;
+  display: inline-block;
+  text-align: center;
+  margin: 4px 4px 0 0;
+  padding: 5px 16px;
+  border-radius: 3px;
+  line-height: 22px;
+  font-size: 18px;
+  font-weight: 900;
+  cursor: pointer;
+  /* display: none; */
+  transition-duration: 0.3s;
+  vertical-align: middle;
+}
+
+.content .board-content .list-adder-wrap {
+  display: inline-block;
+  margin-left: 5px;
+  color: rgba(255, 255, 255, 0.7);
+  height: 35px;
+  padding: 10px 10px;
+  border-radius: 3px;
+  width: 270px;
+  line-height: 18px;
+  background-color: rgba(0, 0, 0, 0.12);
+  transition-duration: 0.3s;
+}
+
+.content .board-content .list-adder-wrap.adding {
+  background-color: #e2e4e6;
+  height: 95px;
+  transition-duration: 0.3s;
+}
+
+.content .board-content .list-adder-wrap .adding-list {
+  display: none;
+}
+
+.content .board-content .list-adder-wrap .adding-list .add-input {
+  border-radius: 3px;
+  width: 100%;
+  border: none;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: rgba(0, 0, 0, .05);
+  color: #333;
+  border: 1px solid #aaa;
+  padding: 7px;
+  box-shadow: inset 0 1px 8px rgba(0, 0, 0, .15);
+  display: block;
+  cursor: text;
+  text-indent: 0px;
+  margin: 0px;
+  transition-duration: 0.3s;
+}
+
+.content .board-content .list-adder-wrap .adding-list .add-btn {
+  background-color: #5aac44;
+  color: #fff;
+  box-shadow: 0 1px 0 #519839;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  margin: 8px 4px 0 0;
+  padding: 5px 16px;
+  border-radius: 3px;
+  line-height: 22px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.content .board-content .list-adder-wrap .adding-list .cancel-btn {
+  height: 30px;
+  color: #999;
+  display: inline-block;
+  text-align: center;
+  margin: 4px 4px 0 0;
+  padding: 5px 16px;
+  border-radius: 3px;
+  line-height: 22px;
+  font-size: 18px;
+  font-weight: 900;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  vertical-align: middle;
+}
+
+.content .board-content .list-adder-wrap .list-adder {
+  cursor: pointer;
+  font-size: 14px;
+  transition-duration: 0.5s;
+}
+
+.content .board-content .list-adder-wrap .dashboard {
+  margin-top: 25px;
+  font-size: 14px;
+  transition-duration: 0.5s;
+}
