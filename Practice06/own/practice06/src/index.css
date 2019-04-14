@@ -1,0 +1,155 @@
+html, body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #F7F9F9;
+    overflow: hidden;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.App {
+    position: relative;
+}
+.button_container {
+    background-color: #63D2FF;
+    width: 100%;
+    display: inline-flex;
+    justify-content: flex-start;
+    padding: 10px;
+    font-weight: 800;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 5px;
+    align-content: center;
+    position: relative;
+}
+
+nav a{
+    color: #444;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #444;
+  
+    position: absolute;
+    top: 0;
+    width: 0%;
+  
+    transition: all ease-in-out 250ms;
+}
+  
+nav a:hover::before {
+    width: 100%;
+}
+
+.home_text {
+    font-size: 100px;
+    text-align: center;
+    margin-top: 20%;
+}
+
+.container {
+    position: relative;
+    border: 1px solid black;
+    height: 2000px;
+    width: 100%;
+    background-color: #BED8D4;
+}
+.container h1 {
+    margin-top: 40px;
+    text-align: center;
+}
+.container table{
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.search_button_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.search_button {
+    border: 1px solid black;
+    margin: 30px;
+    width: 320px;
+    height: 200px;
+    background-color: #78D5D7;
+}
+
+.search_button a{
+    color: #444;
+    text-decoration: none;
+    font-size: 100px;
+}
+
+.search_button a:hover {
+    color: #000;
+}
+
+.search_button a::after {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #444;
+    width: 0%;
+  
+    transition: all ease-in-out 250ms;
+}
+  
+.search_button a:hover::after {
+    width: 100%;
+}
+
+.search_table {
+    position: absolute;
+    border: 1px solid black;
+}
+
+.input_container {
+    border: 1px solid black;
+    height: 400px;
+    width: 300px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.form {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.submit {
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
